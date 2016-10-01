@@ -1,3 +1,18 @@
-<h1>
+<md-toolbar>
   {{title}}
-</h1>
+</md-toolbar>
+<md-card *ngFor="let exercise of exercises | async">
+  <md-card-header>
+    <img md-card-avatar src="path/to/img.png">
+    <md-card-title>{{exercise.type}}</md-card-title>
+  </md-card-header>
+    <img md-card-image src="path/to/img.png">
+  <md-card-content>
+    <h1>{{ exercise.name }}</h1>
+    <p>{{ exercise.description }}</p>
+  </md-card-content>
+  <md-card-actions>
+        <button md-button>LIKE</button>
+        <button md-button>SHARE</button>
+   </md-card-actions>
+</md-card>
